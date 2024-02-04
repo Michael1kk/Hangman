@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="pane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hangman.hangman.MainController">
+    <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <Menu mnemonicParsing="false" text="Игра">
+            <MenuItem mnemonicParsing="false" onAction="#restart" text="Начать заново"/>
+            <MenuItem mnemonicParsing="false" onAction="#exit" text="Выйти из игры"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Справка">
+            <MenuItem mnemonicParsing="false" onAction="#aboutGame" text="Об игре"/>
+            <MenuItem mnemonicParsing="false" onAction="#aboutDeveloper" text="О разработчике"/>
+        </Menu>
+    </MenuBar>
+    <Line fx:id="border" endX="500.0" layoutX="100.0" layoutY="335.0" startX="-100.0"/>
+    <Label fx:id="word" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="283.0"
+           prefHeight="50.0" prefWidth="354.0" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Times New Roman Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Label fx:id="attempts" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="522.0" layoutY="38.0"
+           prefHeight="28.0" prefWidth="33.0" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Times New Roman Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="493.0" layoutY="38.0" prefHeight="28.0"
+           prefWidth="34.0" text="❤" textAlignment="RIGHT" textFill="RED" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Times New Roman Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Rectangle fx:id="pillar" arcHeight="5.0" arcWidth="5.0" height="183.0" layoutX="69.0" layoutY="153.0"
+               stroke="BLACK" strokeType="INSIDE" visible="false" width="26.0"/>
+    <Rectangle fx:id="beam" arcHeight="5.0" arcWidth="5.0" height="26.0" layoutX="42.0" layoutY="127.0" stroke="BLACK"
+               strokeType="INSIDE" visible="false" width="287.0"/>
+    <Rectangle fx:id="rope" arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="298.0" layoutY="153.0" stroke="BLACK"
+               strokeType="INSIDE" visible="false" width="5.0"/>
+    <Rectangle fx:id="body" arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="291.0" layoutY="223.0" stroke="BLACK"
+               strokeType="INSIDE" visible="false" width="20.0"/>
+    <Circle fx:id="head" layoutX="301.0" layoutY="210.0" radius="17.0" stroke="BLACK" strokeType="INSIDE"
+            visible="false"/>
+    <Rectangle fx:id="armRight" arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="282.0" layoutY="220.0"
+               rotate="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0"/>
+    <Rectangle fx:id="armLeft" arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="316.0" layoutY="220.0"
+               rotate="-45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0"/>
+    <Rectangle fx:id="legRight" arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="292.0" layoutY="270.0"
+               stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0"/>
+    <Rectangle fx:id="legLeft" arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="305.0" layoutY="270.0"
+               stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0"/>
+</AnchorPane>

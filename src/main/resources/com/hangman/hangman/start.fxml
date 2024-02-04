@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0"
+      prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.hangman.hangman.StartController">
+    <Label layoutX="43.0" layoutY="23.0" text="Добро пожаловать в игру &quot;Виселица&quot;" textAlignment="CENTER"
+           textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Times New Roman Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Button alignment="CENTER" focusTraversable="false" layoutX="176.0" layoutY="103.0" mnemonicParsing="false"
+            onMouseClicked="#handleEasyBtn" prefHeight="52.0" prefWidth="147.0" text="Лёгкий" textAlignment="CENTER">
+        <font>
+            <Font name="Times New Roman Bold" size="18.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <Button alignment="CENTER" focusTraversable="false" layoutX="177.0" layoutY="167.0" mnemonicParsing="false"
+            onMouseClicked="#handleMediumBtn" prefHeight="52.0" prefWidth="147.0" text="Средний" textAlignment="CENTER">
+        <font>
+            <Font name="Times New Roman Bold" size="18.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <Button alignment="CENTER" focusTraversable="false" layoutX="176.0" layoutY="232.0" mnemonicParsing="false"
+            onMouseClicked="#handleHardBtn" prefHeight="52.0" prefWidth="147.0" text="Сложный" textAlignment="CENTER">
+        <font>
+            <Font name="Times New Roman Bold" size="18.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <Label layoutX="57.0" layoutY="51.0" text="Выберите уровень сложности игры" textAlignment="CENTER"
+           textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Times New Roman Bold" size="24.0"/>
+        </font>
+    </Label>
+</Pane>
